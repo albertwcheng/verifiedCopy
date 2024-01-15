@@ -12,4 +12,18 @@ Copy each 1024-byte blocks of data from src to dst (full file name), and checkin
 ```
 vcp src dst
 ```
+or
+```
+vcp2 copy src dst
+```
+
+Verify first numBytesToCheck bytes between file1 and file2, and print verified if same, notverified if different.
+```
+vcp2 verify src dst numBytesToCheck
+```
+
+Verify first numBytesToCheck bytes between file1 and file2, if not the same, do a verified copy of src to dst.
+```
+vcp2 copyIfNotVerified src dst numBytesToCheck
+```
 
